@@ -1,0 +1,183 @@
+<!-- Define que el documento esta bajo el estandar de HTML 5 -->
+<!doctype html>
+
+<!-- Representa la raíz de un documento HTML o XHTML. Todos los demás elementos deben ser descendientes de este elemento. -->
+<html lang="es">
+    
+    <head>
+        
+        <meta charset="utf-8">
+        
+        <title>Misión y Visión</title>
+		<link rel="shortcut icon" href="img/icon-ujcv.png">    
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Videojuegos & Desarrollo">
+        <meta name="description" content="Muestra de un formulario de acceso en HTML y CSS">
+        <meta name="keywords" content="Formulario Acceso, Formulario de LogIn">
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+        
+        
+        <style type="text/css">
+
+            body {
+                background-image: url("img/fondo-blanco.jpg");
+                font-family: 'Roboto', sans-serif;
+                            
+                height: 100vh;
+                width: 100vh;
+                background-size: cover;
+
+                font-weight: normal;
+                font-size: 85%;
+                color: #1b262c;
+                
+                margin: 0;
+                
+            }
+
+            #tablee {
+               border-spacing: 30px;
+            }
+
+            #th_td {
+                padding-top: 50px;
+                padding-bottom: 40px;
+                padding-left: 60px;
+                padding-right: 40px;
+            }   
+
+            #_th{
+                border:5px solid #125c94;
+                background-color: #125c94;
+                text-align:center;
+                width:22%;
+                height: 40px;
+                font-size: 18px;
+                padding: -10px;
+            }
+
+            #contenedor {
+                display: inline;
+                align-items: left;
+                justify-content: left;
+                
+                margin: 10%;
+                padding: 10%;
+                min-width: 80vw;
+                min-height: 80vh;
+                width: 180%;
+                height: 180%;
+            }
+
+            #box-form {
+                width: 180%;
+                padding: 40px 20px;
+                background-color: white;
+                opacity: 0.9;
+                -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+                -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+                box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+                
+                border-radius: 3px 3px 3px 3px;
+                -moz-border-radius: 3px 3px 3px 3px;
+                -webkit-border-radius: 3px 3px 3px 3px;
+                
+                box-sizing: border-box;
+            }
+            
+        </style>
+        
+        <script type="text/javascript">
+        
+        </script>
+      
+
+    </head>
+    
+
+    <body>
+
+        <div style="margin-top: 0px;">
+            <table height=50px width=100% style="border-spacing: 0px; background-color: #125c94;" >
+                <thead>
+                  <tr>
+                    <th id="_th"><img src="img/logo-ujcv.svg.png" width="25%"></th>
+                  </tr>
+                </thead>
+            </table>
+
+        </div>
+
+        <table id="tablee">
+
+            <tr>
+
+                <td id="th_td" style="width:50%; border-left: 28px " >
+
+                    <div id="contenedor" >
+                        <div id="box-form">                  
+                            <form id="visionform">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <center>
+                                            <h1><strong>Visión</strong></h1>
+                                            <p>Ser reconocida como una universidad integral de calidad 
+                                            académica, con enfoque de investigación, innovación y el 
+                                            desarrollo de Honduras.</p>
+                                            </center>
+                                        </td>
+        
+                                        <td>
+                                            <img src="img/ujcv-logo2.PNG" width="180" height="133" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                
+                            </form>
+                        </div>
+                    </div>
+            
+                       
+                    <div id="contenedor">
+                        <div id="box-form">                  
+                            <form id="misionform">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <center>
+                                            <h1><strong>Misión</strong></h1>
+                                            <p>Formar profesionales líderes con visión global y competitiva, con actitud emprendedora, 
+                                            enfoque empresarial y tecnológico, potenciando la investigación, la innovación y la 
+                                            responsabilidad social empresarial. </p>
+                                            </center>
+                                        </td>
+        
+                                        <td>
+                                            <img src="img/ujcv-logo2.PNG" width="180" height="133">
+                                        </td>
+        
+                                    </tr>
+        
+                                </table>
+                            
+                            </form>
+                        </div>
+                    </div>
+                </td>
+
+                <td id="th_td">
+                    <img src="img/ujcv-icono-mision_vision.png" width="667" height="1044" style="border-radius: 10px; height: 450px;" />
+                </td>
+
+
+            </tr>
+
+        </table>
+
+    </body>
+</html>
