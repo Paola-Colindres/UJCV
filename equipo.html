@@ -20,6 +20,9 @@
             margin-top: 0px;
         
         }
+        * {
+    transition: all 0.5s;
+}
 
         #_th {
             border:5px solid #125c94;
@@ -100,8 +103,8 @@
             width: 150%;
             height: 150%;
         }
-
-        #box-form {
+            #box-form {
+            
             width: 150%;
             padding: 40px 20px;
             background-color: white;
@@ -116,6 +119,89 @@
             
             box-sizing: border-box;
         }
+
+.area-tarjeta,
+.tarjeta,
+.cara {
+    cursor: pointer;
+    width: 300px;
+    min-width: 300px;
+    height:652px;
+}
+
+.tarjeta {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: inset 0 0 0 0px white;
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trasera0{
+   
+    background-image: url("img/Tarjetas\ de\ presentacion\ \(tefa\)\ trasera.png") ;
+    background-size: 300px;
+    background-position: right;
+    transform: rotateY(180deg);
+}
+
+.superior0{
+
+    background-image: url("img/Tarjetas\ de\ presentacion\ \(tefa\)\ frontal.png") ;
+   background-size: 300px;
+   background-position: left;
+}
+.trasera1{
+   
+   background-image: url("img/Tarjetas\ de\ presentacion\ paola\ trasera.png") ;
+   background-size: 300px;
+   background-position: right;
+   transform: rotateY(180deg);
+}
+
+.superior1{
+
+   background-image: url("img/Tarjetas\ de\ presentacion\ Paola\ frontal.png") ;
+  background-size: 300px;
+  background-position: left;
+}
+.trasera2{
+   
+   background-image: url("img/Tarjetas\ de\ presentacion\ marco\ trasera.png") ;
+   background-size: 300px;
+   background-position: right;
+   transform: rotateY(180deg);
+}
+
+.superior2{
+
+  background-image: url("img/Tarjetas\ de\ presentacion\ marco\ frontal.png") ;
+  background-size: 300px;
+  background-position: left;
+}
+.trasera3{
+   
+   background-image: url("img/Tarjetas\ de\ presentacion\ anthony\ trasera.png") ;
+   background-size: 300px;
+   background-position: right;
+   transform: rotateY(180deg);
+}
+
+.superior3{
+
+  background-image: url("img/Tarjetas\ de\ presentacion\ anthony\ frontal.png") ;
+  background-size: 300px;
+  background-position: left;
+}
+
+
 
     </style>
   </head>
@@ -175,6 +261,40 @@
                 </tr>
             </thead>
         </table>
+        <div id="tablero" style="background-color:black; border-left: 50px solid black;"> 
+        </div>
+                        <script>
+                        let tablero = document.getElementById("tablero")
+                        let tarjetas = []
+                        for(let i = 0; i < 4; i++){
+                        tarjetas.push(`
+            <div style="display: inline-block;" class="area-tarjeta" onclick="seleccionarTarjeta(${i})">
+                <div class="tarjeta" id="tarjeta${i}">
+                    <div class="cara trasera${i}" id="trasera${i}">
+                    </div>
+                    <div class="cara superior${i}">
+                    </div>
+                </div>
+            </div>        
+            
+            `)
+        }
+            tablero.innerHTML = tarjetas.join(" ")
+
+
+            function seleccionarTarjeta(i) {  
+        let tarjeta = document.getElementById("tarjeta" + i)
+        if(tarjeta.style.transform != "rotateY(180deg)") {
+            tarjeta.style.transform = "rotateY(180deg)"
+            
+        }else if(tarjeta.style.transform != "rotateY(0deg)") {
+            tarjeta.style.transform = "rotateY(0deg)"
+        }
+    }
+                    </script>        
+                    
+                
+        
 
     </div>
 
@@ -273,5 +393,5 @@
 
         </table>
     </div>
-    
+    
 </html>
