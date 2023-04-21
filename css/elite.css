@@ -18,6 +18,11 @@ body {
     padding: -10px;
 }
 
+td {
+    padding-left: 30px;
+    padding-right: 0px;
+}
+
 a {
     color: white;
     font-family: 'Open Sans', sans-serif;
