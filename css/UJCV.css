@@ -73,10 +73,6 @@ overflow: auto;
 }
 .services{
   background-image: linear-gradient(rgba(0,0,0.7),rgba(0,0,0.7), url(img/ujcv-dia.jpeg));
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   padding: 100px 0;
 }
 .services-content{
